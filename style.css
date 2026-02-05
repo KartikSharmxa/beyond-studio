@@ -194,13 +194,20 @@ html {
 
 
 /* --- Hero Section --- */
+.hero-section-container{
+    display: flex ;
+    justify-content: center;
+    align-items:center;
+    height: fit-content;
+}
 .hero-section {
     display: flex;
-    
+        /* border: 1px solid green; */
+
     justify-content: space-between;
     /* align-items: center; */
-    max-width: 100vw;
-    margin: 40px 40px;
+    /* max-width: 100vw; */
+    /* margin: 40px 40px; */
     padding: 0 50px;
     height: calc(100vh - 100px);
 
@@ -226,7 +233,7 @@ html {
 }
 
 main.hero-section {
-    max-width: 90vw;
+    max-width: 95vw;
 }
 
 /* Left Column */
@@ -237,6 +244,8 @@ main.hero-section {
     width: 100vw;
     display: flex;
     align-items: center;
+        /* border: 1px solid green; */
+
 }
 
 .hero-container {
@@ -249,12 +258,13 @@ main.hero-section {
 
 /* LEFT */
 .hero-title {
-    font-size: 56.30px;
+    /* font-size: 56.30px; */
+    font-size:56.54px;
     line-height: 1.0;
     font-weight: 500;
     color: #ffffff;
-    /* margin-top: -40px; */
-    margin-top: 70px;
+    margin-top: -40px;
+    margin-top: 30px;
     /* margin-left: -37px; */
 
     opacity: 0;
@@ -427,7 +437,7 @@ main.hero-section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
+    /* padding: 10px; */
 
     animation: scrollUp 18s linear infinite;
     will-change: transform;
@@ -1904,7 +1914,6 @@ body {
   height: 300px;      
   width: auto;
   display: block;
-  margin-left: -60px;
 }
 
     .nav-links {
@@ -1988,11 +1997,12 @@ body {
     /* Adjust Title for Mobile */
     .hero-title {
 
-        font-size: 30px; 
+        font-size: 8vw; 
         margin-left: 0;
         margin-top: 0;
+        
         line-height: 1.2;
-        text-align: center;
+        /* text-align: justify; */
     }
 
     @media (min-width: 768px) {
@@ -2006,7 +2016,6 @@ body {
         font-size: 16px;
         margin-left: 0;
         margin-top: 20px;
-        padding: 0 10px;
                 
 
     }
@@ -2079,11 +2088,41 @@ body {
 
 
 
-
-
-
-
 }
+
+
+/* iPhone 14 / 15 / 16 */
+@media (max-width: 430px) {
+
+  .reels-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .reel-card {
+    width: 100%;
+    height: 260px;   /* sab same height */
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  /* IMPORTANT: first reel ka special size hatao */
+  .reel-card:first-child {
+    grid-column: auto;
+    height: 260px;
+  }
+
+  .reel-card img,
+  .reel-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+
 
 @media screen and (max-width: 450px){
     .free-note {
@@ -2369,13 +2408,14 @@ body {
 
 @media screen and (max-width: 1024px) {
     .shorts {
-        padding: 60px 0; 
+        padding: 70px 0;
+        /* margin-top: 70px ; */
     }
 
     .title {
         font-size: clamp(32px, 8vw, 48px); 
         padding: 0 20px;
-        margin-top: 0;
+        margin-top: 33px;
     }
 
     .subtitle {
