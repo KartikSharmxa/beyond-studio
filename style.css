@@ -949,7 +949,7 @@ body {
 .shorts {
     position: relative;
     /* min-height: 100vh; */
-    padding: 120px 60px;
+    padding: 80px 60px;
     overflow: hidden;
     text-align: center;
 }
@@ -2409,7 +2409,7 @@ body {
 
 @media screen and (max-width: 1024px) {
     .shorts {
-        padding: 70px 0;
+        padding: 30px 0;
         /* margin-top: 70px ; */
     }
 
