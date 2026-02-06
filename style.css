@@ -948,7 +948,7 @@ body {
 /* SECTION */
 .shorts {
     position: relative;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 120px 60px;
     overflow: hidden;
     text-align: center;
