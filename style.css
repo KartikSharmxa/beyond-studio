@@ -948,7 +948,7 @@ body {
 /* SECTION */
 .shorts {
     position: relative;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 120px 60px;
     overflow: hidden;
     text-align: center;
@@ -2634,7 +2634,7 @@ body {
 .video-card {
     width: 100%; 
     max-width: 350px; /* Desktop width limit */
-    aspect-ratio: 9 / 13;
+    aspect-ratio: 9 / 16;
     border-radius: 18px;
     background: #000;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -2656,15 +2656,4 @@ body {
         padding: 40px 10px !important;
     }
 
-    .video-card {
-    width: 100%; 
-    max-width: 250px; /* small width limit */
-    aspect-ratio: 9 / 13;
-    border-radius: 18px;
-    background: #000;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
 }
