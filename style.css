@@ -948,7 +948,7 @@ body {
 /* SECTION */
 .shorts {
     position: relative;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 120px 60px;
     overflow: hidden;
     text-align: center;
@@ -2614,4 +2614,57 @@ body {
     .footer-social {
         gap: 20px;
     }
+}
+
+
+/* Swiper specific adjustment */
+.myReelsSwiper {
+    width: 100%;
+    padding: 60px 20px !important; /* Spacing for cards and shadows */
+    overflow: visible; /* To see the next slide peeking */
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Video Card adjustments for Desktop & Mobile */
+.video-card {
+    width: 100%; 
+    max-width: 350px; /* Desktop width limit */
+    aspect-ratio: 9 / 13;
+    border-radius: 18px;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Remove hover scale on mobile for better UX */
+@media (min-width: 1024px) {
+    .video-card:hover {
+        transform: translateY(-10px) scale(1.02);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .myReelsSwiper {
+        padding: 40px 10px !important;
+    }
+
+    .video-card {
+    width: 100%; 
+    max-width: 250px; /* small width limit */
+    aspect-ratio: 9 / 13;
+    border-radius: 18px;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
 }
