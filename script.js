@@ -235,3 +235,10 @@ function removeExistingStars() {
       navList.classList.remove('active');
     });
   });
+
+
+
+
+
+
+
