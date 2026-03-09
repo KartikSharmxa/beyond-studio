@@ -240,5 +240,60 @@ function removeExistingStars() {
 
 
 
+document.querySelectorAll('.myReelsSwiper').forEach((swiperEl) => {
 
+  const wrapper = swiperEl.closest('.reels-section');
+
+  const swiper = new Swiper(swiperEl, {
+
+    grabCursor: true,
+    spaceBetween: 20,
+    loop: true,
+    speed: 700,
+
+    observer: true,
+    observeParents: true,
+
+    navigation: {
+      nextEl: wrapper.querySelector('.swiper-button-next-custom'),
+      prevEl: wrapper.querySelector('.swiper-button-prev-custom'),
+    },
+
+    pagination: {
+      el: wrapper.querySelector('.custom-pagination-dots'),
+      clickable: true,
+    },
+
+    breakpoints: {
+
+      0: {
+        slidesPerView: 1.2,
+        spaceBetween: 15,
+      },
+
+      480: {
+        slidesPerView: 1.6,
+        spaceBetween: 15,
+      },
+
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+      },
+
+      1024: {
+        slidesPerView: 3.5,
+        spaceBetween: 20,
+      },
+
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+
+    },
+
+  });
+
+});
 
