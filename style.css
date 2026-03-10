@@ -4,6 +4,7 @@ body {
 }
 
 
+
 @font-face {
     font-family: "Satoshi";
     src: url("fonts/Satoshi-Regular.woff2") format("woff2");
@@ -1819,10 +1820,10 @@ body {
 /* company logo section */
 
 .flywheel-wrap {
-  width: 150%;
+  width: 100%;
   overflow: hidden;
   background: #050505;
-  padding: 70px 0;
+  padding: 90px 0;
   position: relative;
 }
 
@@ -1891,7 +1892,7 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 6px;
+    gap: 5px;
     z-index: 2001;
 }
 
