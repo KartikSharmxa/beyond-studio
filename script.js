@@ -240,60 +240,42 @@ function removeExistingStars() {
 
 
 
-document.querySelectorAll('.myReelsSwiper').forEach((swiperEl) => {
 
-  const wrapper = swiperEl.closest('.reels-section');
 
-  const swiper = new Swiper(swiperEl, {
 
-    grabCursor: true,
-    spaceBetween: 20,
-    loop: true,
-    speed: 700,
 
-    observer: true,
-    observeParents: true,
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.swiper-container');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
 
-    navigation: {
-      nextEl: wrapper.querySelector('.swiper-button-next-custom'),
-      prevEl: wrapper.querySelector('.swiper-button-prev-custom'),
-    },
+    // Next Button Functionality
+    nextBtn.addEventListener('click', () => {
+        const slideWidth = container.clientWidth;
+        container.scrollBy({
+            left: slideWidth,
+            behavior: 'smooth'
+        });
+    });
 
-    pagination: {
-      el: wrapper.querySelector('.custom-pagination-dots'),
-      clickable: true,
-    },
+    // Previous Button Functionality
+    prevBtn.addEventListener('click', () => {
+        const slideWidth = container.clientWidth;
+        container.scrollBy({
+            left: -slideWidth,
+            behavior: 'smooth'
+        });
+    });
 
-    breakpoints: {
-
-      0: {
-        slidesPerView: 1.2,
-        spaceBetween: 15,
-      },
-
-      480: {
-        slidesPerView: 1.6,
-        spaceBetween: 15,
-      },
-
-      768: {
-        slidesPerView: 2.5,
-        spaceBetween: 20,
-      },
-
-      1024: {
-        slidesPerView: 3.5,
-        spaceBetween: 20,
-      },
-
-      1280: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-
-    },
-
-  });
-
+    // Optional: Auto-pause videos when scrolling (User experience ke liye)
+    container.addEventListener('scroll', () => {
+        const videos = document.querySelectorAll('.launch-video');
+        videos.forEach(video => {
+            // Agar video poori tarah screen par nahi hai toh pause kar de
+            const rect = video.getBoundingClientRect();
+            if (rect.left < 0 || rect.right > window.innerWidth) {
+                video.pause();
+            }
+        });
+    });
 });
-
