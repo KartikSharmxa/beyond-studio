@@ -1268,11 +1268,19 @@ document.addEventListener("DOMContentLoaded", function() {
     slider.scrollLeft = scrollLeft - walk;
   });
 });
+// faq
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
+});
 </script>
 
   <script src="script.js"></script>
   
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js">
+
+  </script>
 
 
   
